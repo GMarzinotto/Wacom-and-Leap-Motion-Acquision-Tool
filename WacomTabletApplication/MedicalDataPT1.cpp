@@ -219,8 +219,8 @@ void WacomTabletApplication::MedicalDataPT1::UpdateLanguage_MedicalDataPT1Form(S
 	ARTHERIOPATIE_HEART_PERSONAL_HISTORY_LABEL->Text = queryNode(str_arthe);
 	
 	pin_ptr<const wchar_t> str_inssuf = PtrToStringChars(String::Concat(L"Root/", language, L"/Forms/MedicalDataPT1Form/MedicalInfo/Inssuficiency"));
-	BREATH_INSSUFICIENCY_MORBIDITIES_LABEL->Text = queryNode(str_inssuf);
-	
+	INSUFFICIENCY_HEART_PERSONAL_HISTORY_LABEL->Text = queryNode(str_inssuf);
+
 	pin_ptr<const wchar_t> str_fibri = PtrToStringChars(String::Concat(L"Root/", language, L"/Forms/MedicalDataPT1Form/MedicalInfo/Fibrillation"));
 	FIBRILLATION_HEART_PERSONAL_HISTORY_LABEL->Text = queryNode(str_fibri);
 	

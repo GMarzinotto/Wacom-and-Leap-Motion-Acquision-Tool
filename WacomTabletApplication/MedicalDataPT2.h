@@ -120,9 +120,9 @@ namespace WacomTabletApplication {
 	private: System::Windows::Forms::NumericUpDown^  ORIENTATION_MMSE_COUNTER;
 	private: System::Windows::Forms::Label^  IADL_MAX_VALUE;
 	private: System::Windows::Forms::NumericUpDown^  IADL_COUNTER;
-	private: System::Windows::Forms::Label^  MEMORY_MAX_VALUE;
+
 	private: System::Windows::Forms::Label^  MMSE_MAX_VALUE;
-	private: System::Windows::Forms::NumericUpDown^  MEMORY_COUNTER;
+
 	private: System::Windows::Forms::NumericUpDown^  MMSE_COUNTER;
 	private: System::Windows::Forms::DateTimePicker^  DATE_MMSE_DATEPICKER;
 	private: System::Windows::Forms::Label^  TMT_B_TIME_SEC_LABEL;
@@ -133,7 +133,7 @@ namespace WacomTabletApplication {
 	private: System::Windows::Forms::CheckBox^  MEMORY_MMSE_CHECKBOX;
 	private: System::Windows::Forms::CheckBox^  LEARNING_MMSE_CHECKBOX;
 	private: System::Windows::Forms::CheckBox^  DATE_MMSE_CHECKBOX;
-	private: System::Windows::Forms::CheckBox^  MEMORY_CHECKBOX;
+
 	private: System::Windows::Forms::CheckBox^  LANGUAGE_MMSE_CHECKBOX;
 	private: System::Windows::Forms::CheckBox^  CALCULE_MMSE_CHECKBOX;
 	private: System::Windows::Forms::CheckBox^  ORIENTATION_MMSE_CHECKBOX;
@@ -360,7 +360,6 @@ namespace WacomTabletApplication {
 			this->MEMORY_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
 			this->LEARNING_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
 			this->DATE_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
-			this->MEMORY_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
 			this->LANGUAGE_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
 			this->CALCULE_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
 			this->ORIENTATION_MMSE_CHECKBOX = (gcnew System::Windows::Forms::CheckBox());
@@ -382,9 +381,7 @@ namespace WacomTabletApplication {
 			this->ORIENTATION_MMSE_COUNTER = (gcnew System::Windows::Forms::NumericUpDown());
 			this->IADL_MAX_VALUE = (gcnew System::Windows::Forms::Label());
 			this->IADL_COUNTER = (gcnew System::Windows::Forms::NumericUpDown());
-			this->MEMORY_MAX_VALUE = (gcnew System::Windows::Forms::Label());
 			this->MMSE_MAX_VALUE = (gcnew System::Windows::Forms::Label());
-			this->MEMORY_COUNTER = (gcnew System::Windows::Forms::NumericUpDown());
 			this->MMSE_COUNTER = (gcnew System::Windows::Forms::NumericUpDown());
 			this->DATE_MMSE_DATEPICKER = (gcnew System::Windows::Forms::DateTimePicker());
 			this->CANCEL_BUTTON = (gcnew System::Windows::Forms::Button());
@@ -438,7 +435,6 @@ namespace WacomTabletApplication {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LEARNING_MMSE_COUNTER))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ORIENTATION_MMSE_COUNTER))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->IADL_COUNTER))->BeginInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MEMORY_COUNTER))->BeginInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MMSE_COUNTER))->BeginInit();
 			this->SuspendLayout();
 			// 
@@ -1822,7 +1818,6 @@ namespace WacomTabletApplication {
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MEMORY_MMSE_CHECKBOX);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->LEARNING_MMSE_CHECKBOX);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->DATE_MMSE_CHECKBOX);
-			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MEMORY_CHECKBOX);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->LANGUAGE_MMSE_CHECKBOX);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->CALCULE_MMSE_CHECKBOX);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->ORIENTATION_MMSE_CHECKBOX);
@@ -1844,9 +1839,7 @@ namespace WacomTabletApplication {
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->ORIENTATION_MMSE_COUNTER);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->IADL_MAX_VALUE);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->IADL_COUNTER);
-			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MEMORY_MAX_VALUE);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MMSE_MAX_VALUE);
-			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MEMORY_COUNTER);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->MMSE_COUNTER);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Controls->Add(this->DATE_MMSE_DATEPICKER);
 			this->NEUROPSYCOLOGIC_EVALUATION_LABEL->Font = (gcnew System::Drawing::Font(L"Microsoft Sans Serif", 14));
@@ -1904,24 +1897,13 @@ namespace WacomTabletApplication {
 			// DATE_MMSE_CHECKBOX
 			// 
 			this->DATE_MMSE_CHECKBOX->AutoSize = true;
-			this->DATE_MMSE_CHECKBOX->Location = System::Drawing::Point(462, 79);
+			this->DATE_MMSE_CHECKBOX->Location = System::Drawing::Point(306, 80);
 			this->DATE_MMSE_CHECKBOX->Name = L"DATE_MMSE_CHECKBOX";
 			this->DATE_MMSE_CHECKBOX->Size = System::Drawing::Size(161, 28);
 			this->DATE_MMSE_CHECKBOX->TabIndex = 101;
 			this->DATE_MMSE_CHECKBOX->Text = L"Date de MMSE:";
 			this->DATE_MMSE_CHECKBOX->UseVisualStyleBackColor = true;
 			this->DATE_MMSE_CHECKBOX->CheckedChanged += gcnew System::EventHandler(this, &MedicalDataPT2::DATE_MMSE_CHECKBOX_CheckedChanged);
-			// 
-			// MEMORY_CHECKBOX
-			// 
-			this->MEMORY_CHECKBOX->AutoSize = true;
-			this->MEMORY_CHECKBOX->Location = System::Drawing::Point(223, 80);
-			this->MEMORY_CHECKBOX->Name = L"MEMORY_CHECKBOX";
-			this->MEMORY_CHECKBOX->Size = System::Drawing::Size(94, 28);
-			this->MEMORY_CHECKBOX->TabIndex = 98;
-			this->MEMORY_CHECKBOX->Text = L"Rappel:";
-			this->MEMORY_CHECKBOX->UseVisualStyleBackColor = true;
-			this->MEMORY_CHECKBOX->CheckedChanged += gcnew System::EventHandler(this, &MedicalDataPT2::MEMORY_CHECKBOX_CheckedChanged);
 			// 
 			// LANGUAGE_MMSE_CHECKBOX
 			// 
@@ -2122,15 +2104,6 @@ namespace WacomTabletApplication {
 			this->IADL_COUNTER->Size = System::Drawing::Size(61, 29);
 			this->IADL_COUNTER->TabIndex = 93;
 			// 
-			// MEMORY_MAX_VALUE
-			// 
-			this->MEMORY_MAX_VALUE->AutoSize = true;
-			this->MEMORY_MAX_VALUE->Location = System::Drawing::Point(414, 79);
-			this->MEMORY_MAX_VALUE->Name = L"MEMORY_MAX_VALUE";
-			this->MEMORY_MAX_VALUE->Size = System::Drawing::Size(25, 24);
-			this->MEMORY_MAX_VALUE->TabIndex = 100;
-			this->MEMORY_MAX_VALUE->Text = L"/3";
-			// 
 			// MMSE_MAX_VALUE
 			// 
 			this->MMSE_MAX_VALUE->AutoSize = true;
@@ -2139,15 +2112,6 @@ namespace WacomTabletApplication {
 			this->MMSE_MAX_VALUE->Size = System::Drawing::Size(35, 24);
 			this->MMSE_MAX_VALUE->TabIndex = 97;
 			this->MMSE_MAX_VALUE->Text = L"/30";
-			// 
-			// MEMORY_COUNTER
-			// 
-			this->MEMORY_COUNTER->Enabled = false;
-			this->MEMORY_COUNTER->Location = System::Drawing::Point(347, 77);
-			this->MEMORY_COUNTER->Maximum = System::Decimal(gcnew cli::array< System::Int32 >(4) { 3, 0, 0, 0 });
-			this->MEMORY_COUNTER->Name = L"MEMORY_COUNTER";
-			this->MEMORY_COUNTER->Size = System::Drawing::Size(61, 29);
-			this->MEMORY_COUNTER->TabIndex = 99;
 			// 
 			// MMSE_COUNTER
 			// 
@@ -2161,9 +2125,9 @@ namespace WacomTabletApplication {
 			// DATE_MMSE_DATEPICKER
 			// 
 			this->DATE_MMSE_DATEPICKER->Enabled = false;
-			this->DATE_MMSE_DATEPICKER->Location = System::Drawing::Point(660, 75);
+			this->DATE_MMSE_DATEPICKER->Location = System::Drawing::Point(485, 77);
 			this->DATE_MMSE_DATEPICKER->Name = L"DATE_MMSE_DATEPICKER";
-			this->DATE_MMSE_DATEPICKER->Size = System::Drawing::Size(188, 29);
+			this->DATE_MMSE_DATEPICKER->Size = System::Drawing::Size(303, 29);
 			this->DATE_MMSE_DATEPICKER->TabIndex = 102;
 			// 
 			// CANCEL_BUTTON
@@ -2263,7 +2227,6 @@ namespace WacomTabletApplication {
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->LEARNING_MMSE_COUNTER))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->ORIENTATION_MMSE_COUNTER))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->IADL_COUNTER))->EndInit();
-			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MEMORY_COUNTER))->EndInit();
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->MMSE_COUNTER))->EndInit();
 			this->ResumeLayout(false);
 
@@ -2330,10 +2293,6 @@ namespace WacomTabletApplication {
 
 	private: System::Void MMSE_CHECKBOX_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
 		MMSE_COUNTER->Enabled = (MMSE_CHECKBOX->Checked) ? true : false;
-	}
-
-	private: System::Void MEMORY_CHECKBOX_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {
-		MEMORY_COUNTER->Enabled = (MEMORY_CHECKBOX->Checked) ? true : false;
 	}
 
 	private: System::Void DATE_MMSE_CHECKBOX_CheckedChanged(System::Object^  sender, System::EventArgs^  e) {

@@ -59,9 +59,6 @@ void WacomTabletApplication::MedicalDataPT2::UpdateLanguage_MedicalDataPT2Form(S
 	pin_ptr<const wchar_t> str_mmse = PtrToStringChars(String::Concat(L"Root/", language, L"/Forms/MedicalDataPT2Form/NeuroPsychoEval/MMSE"));
 	MMSE_CHECKBOX->Text = queryNode(str_mmse);
 	
-	pin_ptr<const wchar_t> str_mem = PtrToStringChars(String::Concat(L"Root/", language, L"/Forms/MedicalDataPT2Form/NeuroPsychoEval/Memory"));
-	MEMORY_CHECKBOX->Text = queryNode(str_mem);
-
 	pin_ptr<const wchar_t> str_datemmse = PtrToStringChars(String::Concat(L"Root/", language, L"/Forms/MedicalDataPT2Form/NeuroPsychoEval/DateMMSE"));
 	DATE_MMSE_CHECKBOX->Text = queryNode(str_datemmse);
 

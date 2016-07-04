@@ -2881,5 +2881,6 @@ private: System::Void YES_HEART_HISTORY_RADIOBUTTON_CheckedChanged(System::Objec
 		//Exit Without Doing Anything
 		MedicalDataPT1::Close();
 	}
+
 };
 }
