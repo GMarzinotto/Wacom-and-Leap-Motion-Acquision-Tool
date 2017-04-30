@@ -1,0 +1,326 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0956C2EF-0F65-425D-B5BE-67A8FF00BB29}</ProjectGuid>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <Keyword>ManagedCProj</Keyword>
+    <RootNamespace>WacomTabletApplication</RootNamespace>
+    <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CLRSupport>true</CLRSupport>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files (x86)\Leap Motion\LeapSDK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>C:\Program Files (x86)\Windows Kits\8.1\Lib\winv6.3\um\x64\Ole32.lib;C:\Program Files (x86)\Leap Motion\LeapSDK\lib\x86\Leap.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+      <EntryPointSymbol>main</EntryPointSymbol>
+      <AdditionalLibraryDirectories>C:\Program Files (x86)\Leap Motion\LeapSDK\lib\x86;E:\Dropbox\Visual Studio Projects\WacomTabletApplication\WacomTabletApplication\Dependencies;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy /yr "C:\Program Files (x86)\Leap Motion\LeapSDK\lib\x86\Leap.dll" "$(TargetDir)"</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>WIN32;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies />
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlreadyOneTest.cpp" />
+    <ClCompile Include="BilanNeuropsychologic.cpp" />
+    <ClCompile Include="extended_bool.cpp" />
+    <ClCompile Include="LanguageInformation.cpp" />
+    <ClCompile Include="LMRecorder.cpp" />
+    <ClCompile Include="NeurologicHistory.cpp" />
+    <ClCompile Include="NeuropsychologicalAssessment.cpp" />
+    <ClCompile Include="OtherAntecedents.cpp" />
+    <ClCompile Include="Patient_BasicInfo.cpp" />
+    <ClCompile Include="Patient_BilanNeuropsychologic.cpp" />
+    <ClCompile Include="Patient_CognitiveDiagnosis.cpp" />
+    <ClCompile Include="Patient_DataM12.cpp" />
+    <ClCompile Include="Patient_LanguageInformation.cpp" />
+    <ClCompile Include="Patient_MedicalHistory.cpp" />
+    <ClCompile Include="Patient_NeurologicHistory.cpp" />
+    <ClCompile Include="Patient_NeuropsychologicalAssessment.cpp" />
+    <ClCompile Include="Patient_OtherAntecedents.cpp" />
+    <ClCompile Include="Patient_PsychiatricHistory.cpp" />
+    <ClCompile Include="Patient_RheumatologicHistory.cpp" />
+    <ClCompile Include="Patient_RiskFactor.cpp" />
+    <ClCompile Include="Patient_SocialSituation.cpp" />
+    <ClCompile Include="Patient_Treatments.cpp" />
+    <ClCompile Include="PsychiatricHistory.cpp" />
+    <ClCompile Include="RheumatologicHistory.cpp" />
+    <ClCompile Include="RiskFactors.cpp" />
+    <ClCompile Include="SocialSituation.cpp" />
+    <ClCompile Include="TestManager.cpp" />
+    <ClCompile Include="Dependencies\queryNodes.cpp" />
+    <ClCompile Include="Dependencies\stdafx.cpp" />
+    <ClCompile Include="Dependencies\Utils.cpp" />
+    <ClCompile Include="MedicalHistory.cpp" />
+    <ClCompile Include="LogIn.cpp" />
+    <ClCompile Include="Treatments.cpp" />
+    <ClCompile Include="CognitiveDiagnosis.cpp" />
+    <ClCompile Include="DataM12.cpp" />
+    <ClCompile Include="NewPatient.cpp" />
+    <ClCompile Include="Patient.cpp" />
+    <ClCompile Include="PatientManager.cpp" />
+    <ClCompile Include="WacomRecorder.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AlreadyOneTest.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="BilanNeuropsychologic.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="extended_bool.h" />
+    <ClInclude Include="LanguageInformation.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="LMRecorder.h" />
+    <ClInclude Include="NeurologicHistory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NeuropsychologicalAssessment.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="OtherAntecedents.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient_BasicInfo.h" />
+    <ClInclude Include="Patient_BilanNeuropsychologic.h" />
+    <ClInclude Include="Patient_CognitiveDiagnosis.h" />
+    <ClInclude Include="Patient_DataM12.h" />
+    <ClInclude Include="Patient_LanguageInformation.h" />
+    <ClInclude Include="Patient_MedicalHistory.h" />
+    <ClInclude Include="Patient_NeurologicHistory.h" />
+    <ClInclude Include="Patient_NeuropsychologicalAssessment.h" />
+    <ClInclude Include="Patient_OtherAntecedents.h" />
+    <ClInclude Include="Patient_PsychiatricHistory.h" />
+    <ClInclude Include="Patient_RheumatologicHistory.h" />
+    <ClInclude Include="Patient_RiskFactor.h" />
+    <ClInclude Include="Patient_SocialSituation.h" />
+    <ClInclude Include="Patient_Treatments.h" />
+    <ClInclude Include="PsychiatricHistory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RheumatologicHistory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="RiskFactors.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="SocialSituation.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="TestManager.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="MedicalHistory.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="LogIn.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Treatments.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="CognitiveDiagnosis.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="DataM12.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="NewPatient.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="Patient.h" />
+    <ClInclude Include="PatientManager.h">
+      <FileType>CppForm</FileType>
+    </ClInclude>
+    <ClInclude Include="WacomRecorder.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="AlreadyOneTest.resx">
+      <DependentUpon>AlreadyOneTest.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BilanNeuropsychologic.resx">
+      <DependentUpon>BilanNeuropsychologic.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LanguageInformation.resx">
+      <DependentUpon>LanguageInformation.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeurologicHistory.resx">
+      <DependentUpon>NeurologicHistory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NeuropsychologicalAssessment.resx">
+      <DependentUpon>NeuropsychologicalAssessment.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="OtherAntecedents.resx">
+      <DependentUpon>OtherAntecedents.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PsychiatricHistory.resx">
+      <DependentUpon>PsychiatricHistory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RheumatologicHistory.resx">
+      <DependentUpon>RheumatologicHistory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RiskFactors.resx">
+      <DependentUpon>RiskFactors.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SocialSituation.resx">
+      <DependentUpon>SocialSituation.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestManager.resx">
+      <DependentUpon>TestManager.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MedicalHistory.resx">
+      <DependentUpon>MedicalHistory.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LogIn.resx">
+      <DependentUpon>LogIn.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Treatments.resx">
+      <DependentUpon>Treatments.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CognitiveDiagnosis.resx">
+      <DependentUpon>CognitiveDiagnosis.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DataM12.resx">
+      <DependentUpon>DataM12.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="NewPatient.resx">
+      <DependentUpon>NewPatient.h</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PatientManager.resx">
+      <DependentUpon>PatientManager.h</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="XML\strings.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+    <Xml Include="XML\strings_languages.xml" />
+    <Xml Include="XML\strings_professions.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="WacomRecorder.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
