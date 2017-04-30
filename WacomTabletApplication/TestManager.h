@@ -298,6 +298,7 @@ namespace WacomTabletApplication {
 			this->Controls->Add(this->START_RECORDING_BUTTON);
 			this->Name = L"TestManager";
 			this->Text = L"TestManager";
+			this->Load += gcnew System::EventHandler(this, &TestManager::TestManager_Load_1);
 			(cli::safe_cast<System::ComponentModel::ISupportInitialize^>(this->INSTRUCTIONS_PICTUREBOX))->EndInit();
 			this->ResumeLayout(false);
 			this->PerformLayout();
@@ -328,5 +329,7 @@ namespace WacomTabletApplication {
 	private: System::Void END_BUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
 		TestManager::Close();
 	}
+private: System::Void TestManager_Load_1(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }

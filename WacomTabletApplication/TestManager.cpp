@@ -129,6 +129,7 @@ void WacomTabletApplication::TestManager::moveInterfacePreviousExercise_Broca() 
 	case BrocaExercises::Task9:		CurrentTest_Broca = BrocaExercises::Task8; 	break;
 	case BrocaExercises::Task10:	CurrentTest_Broca = BrocaExercises::Task9; 	break;
 	case BrocaExercises::Task11:	CurrentTest_Broca = BrocaExercises::Task10; break;
+	case BrocaExercises::Task12:	CurrentTest_Broca = BrocaExercises::Task11; break;
 	default: break;
 	}
 }
@@ -181,7 +182,8 @@ void WacomTabletApplication::TestManager::moveInterfaceNextExercise_Broca() {
 	case BrocaExercises::Task8:		this->CurrentTest_Broca = BrocaExercises::Task9; 	break;
 	case BrocaExercises::Task9:		this->CurrentTest_Broca = BrocaExercises::Task10;	break;
 	case BrocaExercises::Task10:	this->CurrentTest_Broca = BrocaExercises::Task11;	break;
-	case BrocaExercises::Task11:	break;
+	case BrocaExercises::Task11:	this->CurrentTest_Broca = BrocaExercises::Task12;	break;
+	case BrocaExercises::Task12:	break;
 	default: break;
 	}
 }
@@ -310,6 +312,13 @@ void WacomTabletApplication::TestManager::refreshInterface_Broca() {
 		INSTRUCTIONS_TITLE_LABEL->Text = "Exercice #11: Chèque Libre";
 		INSTRUCTIONS_DETAIL_LABEL->Text = L"Le patient doit remplir un chèque de façon libre";
 		INSTRUCTIONS_PICTUREBOX->ImageLocation = "Images\\Task11.gif";
+		PREVIOUS_EXERCISE_BUTTON->Enabled = true;
+		NEXT_EXERCISE_BUTTON->Enabled = true;
+		break;
+	case BrocaExercises::Task12:
+		INSTRUCTIONS_TITLE_LABEL->Text = "Exercice #12: Description d'une Scène";
+		INSTRUCTIONS_DETAIL_LABEL->Text = L"Le patient doit décrire la scène autant que possible";
+		INSTRUCTIONS_PICTUREBOX->ImageLocation = "Images\\Task12.jpg";
 		PREVIOUS_EXERCISE_BUTTON->Enabled = true;
 		NEXT_EXERCISE_BUTTON->Enabled = false;
 		break;
@@ -496,6 +505,10 @@ String^ WacomTabletApplication::TestManager::getPathToDestinationFile_Broca() {
 		if (testType == TestTypes::Broca_Arab)		pathDestiny = String::Concat(L"Patients Records\\HW-ARAB\\", preResult, "\\Test11.txt");
 		if (testType == TestTypes::Broca_French)	pathDestiny = String::Concat(L"Patients Records\\HW-FRENCH\\", preResult, "\\Test11.txt");
 		break;
+	case BrocaExercises::Task12:
+		if (testType == TestTypes::Broca_Arab)		pathDestiny = String::Concat(L"Patients Records\\HW-ARAB\\", preResult, "\\Test12.txt");
+		if (testType == TestTypes::Broca_French)	pathDestiny = String::Concat(L"Patients Records\\HW-FRENCH\\", preResult, "\\Test12.txt");
+		break;
 	default: break;
 
 	}
@@ -614,6 +627,7 @@ void WacomTabletApplication::TestManager::startRecordingExercise_Broca() {
 	case BrocaExercises::Task9:		launchWacomRecording(NO_TIME_LIMIT_WACOM);		break;
 	case BrocaExercises::Task10:	launchWacomRecording(NO_TIME_LIMIT_WACOM);		break;
 	case BrocaExercises::Task11:	launchWacomRecording(NO_TIME_LIMIT_WACOM);		break;
+	case BrocaExercises::Task12:	launchWacomRecording(NO_TIME_LIMIT_WACOM);		break;
 	default: break;
 	}
 		
@@ -746,6 +760,7 @@ void WacomTabletApplication::TestManager::createRecordResultsFile_Broca() {
 	case BrocaExercises::Task9:		fout << endl << "Exercise 9: Free Envelope" << endl << endl; break;
 	case BrocaExercises::Task10:	fout << endl << "Exercise 10: Imposed Check" << endl << endl; break;
 	case BrocaExercises::Task11:	fout << endl << "Exercise 11: Free Check" << endl << endl; break;
+	case BrocaExercises::Task12:	fout << endl << "Exercise 12: Scene Description" << endl << endl; break;
 	default: break;
 	}
 

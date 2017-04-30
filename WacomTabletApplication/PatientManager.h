@@ -54,6 +54,7 @@ namespace WacomTabletApplication {
 	private: void WacomTabletApplication::PatientManager::BeginTest(TestTypes t);
 	private: LONG WacomTabletApplication::PatientManager::DeleteDirectoryAndAllSubfolders(LPCWSTR wzDirectory);
 	private: void WacomTabletApplication::PatientManager::removePatientFromList(String^ removePatient);
+   
 
 	private: System::Windows::Forms::Button^  NEW_EXERCISE_BROCA_FRENCH;
 	private: System::Windows::Forms::Button^  EXERCISE_HISTORY;
@@ -268,6 +269,7 @@ namespace WacomTabletApplication {
 			this->Controls->Add(this->NEW_EXERCISE_BROCA_FRENCH);
 			this->Name = L"PatientManager";
 			this->Text = L"Patients Manager";
+			this->Load += gcnew System::EventHandler(this, &PatientManager::PatientManager_Load);
 			this->ResumeLayout(false);
 			this->PerformLayout();
 
@@ -330,6 +332,7 @@ namespace WacomTabletApplication {
 	private: System::Void UPDATE_INFO_BUTTON_Click(System::Object^  sender, System::EventArgs^  e) {
 		Patient *myPatient = new Patient();
 		//TODO: Complete the Patient information from a file (serialization?)
+        myPatient->basicInfo.setID(COMBOBOX_SELECT_PATIENT->Text);
 		NewPatient ^form = gcnew NewPatient(myPatient, currentLanguage, false);
 		form->ShowDialog();
 	}
@@ -361,5 +364,7 @@ namespace WacomTabletApplication {
 		BeginTest(TestTypes::LeapHand);
 	}
 
+private: System::Void PatientManager_Load(System::Object^  sender, System::EventArgs^  e) {
+}
 };
 }
