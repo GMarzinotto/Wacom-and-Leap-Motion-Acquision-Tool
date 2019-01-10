@@ -10,7 +10,9 @@ This application is designed for two things:
 # System Requierements
 
 The sofware has to be used in Windows OS.
+
 First you must install the Wacom Drivers as explained in the Tutorial [here](https://www.dropbox.com/s/juup7uxulsmdr6z/Wacom_Configuration.pdf?dl=0)
+
 The first time the program is run, the computer might need some missing DLLs. However, this rarelly happens.
 
 -------
