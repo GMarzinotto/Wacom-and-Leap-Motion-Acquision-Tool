@@ -27,7 +27,11 @@ To log into the application
 - **Username:** TelecomSudParis
 - **Password:** 123
 
+![](./images/Capture1.jpg)
+
 Once you log in, you can create a new patient and fill its information
+
+![](./images/Capture2.jpg)
 
 Once you have a patient you can start recording, you can chose one of the following protocols:
 
@@ -37,8 +41,12 @@ Once you have a patient you can start recording, you can chose one of the follow
 - **Leap Motion Tools** : Record using the Leap Motion and a pointing tool
 - **Leap Motion Hand** : Record using the Leap Motion and a full hand recording
 
+![](./images/Capture3.jpg)
+
 Once you select the type of activity you want to do, you can launch the recording and stop when you are done.
 
+![](./images/Capture4.jpg)
+ 
 Normally, it should give you a preview of what has been recorded, so you can accept it before it gets written into a file
 
 All files are stored in a CSV alike format, so you can parse them easily, you can find a sample file [here]()
