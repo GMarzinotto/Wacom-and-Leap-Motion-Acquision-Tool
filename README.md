@@ -51,7 +51,7 @@ Once you select the type of activity you want to do, you can launch the recordin
  
 Normally, it should give you a preview of what has been recorded, so you can accept it before it gets written into a file
 
-All files are stored in a CSV alike format, so you can parse them easily, you can find a sample file [here]()
+All files are stored in a CSV alike format, so you can parse them easily, you can find a sample file [here](https://github.com/GMarzinotto/MATLAB-Handwriting/tree/master/Demo/Demo%20Database/Wacom/PERSON0)
 
 -------
 # Modifying the App
