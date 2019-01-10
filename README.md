@@ -19,12 +19,13 @@ The first time the program is run, the computer might need some missing DLLs. Ho
 You can download the precopiled Windows app from [here](1) and hopefully it will work.
 Otherwise you will have to download the sources here and recopile it.
 Once you have the **RecordingApplication.exe** you can run it to lauch the recorder 
+
 ------
 # Recording
 
 To log into the application
-**Username:** TelecomSudParis
-**Password:** 123
+- **Username:** TelecomSudParis
+- **Password:** 123
 
 Once you log in, you can create a new patient and fill its information
 
