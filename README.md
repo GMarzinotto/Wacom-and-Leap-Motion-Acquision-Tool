@@ -10,13 +10,13 @@ This application is designed for two things:
 # System Requierements
 
 The sofware has to be used in Windows OS.
-First you must install the Wacom Drivers as explained in the Tutorial
+First you must install the Wacom Drivers as explained in the Tutorial [here](https://www.dropbox.com/s/juup7uxulsmdr6z/Wacom_Configuration.pdf?dl=0)
 The first time the program is run, the computer might need some missing DLLs. However, this rarelly happens.
 
 -------
 # Using the App
 
-You can download the precopiled Windows app from [here](1) and hopefully it will work.
+You can download the precopiled Windows app from [here](https://www.dropbox.com/s/dodpf0txgpwdu8w/Recorder.tar.gz?dl=0) and hopefully it will work.
 Otherwise you will have to download the sources here and recopile it.
 Once you have the **RecordingApplication.exe** you can run it to lauch the recorder 
 
